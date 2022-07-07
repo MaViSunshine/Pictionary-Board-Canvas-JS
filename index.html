@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/ico"/>
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <style src=""></style>
+    <title>Pictioboard</title>
+</head>
+<body>
+    <div class="field">
+        <canvas id="canvas"></canvas>
+        <div class="tools">
+            <div class="color-palette">
+                <button type="button" title="blue" onclick="changeColor(this)" class="color-btn" style="background: blue"></button>
+                <button type="button" title="yellow" onclick="changeColor(this)" class="color-btn" style="background: yellow"></button>
+                <button type="button" title="green" onclick="changeColor(this)" class="color-btn" style="background: green"></button>
+                <button type="button" title="red" onclick="changeColor(this)" class="color-btn" style="background: red"></button>
+                <button type="button" title="white" onclick="changeColor(this)" class="color-btn" style="background: white"></button>
+                <button type="button" title="black" onclick="changeColor(this)" class="color-btn" style="background: black"></button>
+                <button type="button" title="brown" onclick="changeColor(this)" class="color-btn" style="background: rgb(148, 96, 29)"></button>
+                <button type="button" title="purple" onclick="changeColor(this)" class="color-btn" style="background: purple"></button>
+                <button type="button" title="white" onclick="changeColor(this)" class="color-btn" style="background: rgb(212, 82, 6)"></button>
+                <button type="button" title="black" onclick="changeColor(this)" class="color-btn" style="background: rgb(248, 79, 172)"></button>
+            </div>   
+            <div class="score">
+                <span id="scoreA">0</span>
+                <button  class="score-btn" id="btn-add-A">+</button>
+                <h2>SCORE</h2>
+                <button  class="score-btn" id="btn-add-B">+</button>
+                <span id="scoreB">0</span>
+            </div> 
+            <div class="controls">
+                <input oninput="drawColor= this.value" type="color" class="color-picker" aria-label="drawing color">
+                <input class="pen-range" oninput="drawWidth= this.value" value="10" min="1" max="300" type="range" aria-label="pen range">
+                <button onclick="undoLast()" type="button" class="btn" title="undo button">UNDO</button>
+                <button onclick="clearCanvas()" type="button" class="btn" title=" clear button">CLEAR</button>
+            </div>
+        </div>
+    </div>
+ <script src="main.js"></script>
+</body>
+</html>
